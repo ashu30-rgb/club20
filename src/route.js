@@ -11,6 +11,7 @@ function RouteContent() {
 
    return (
     <Routes>
+      <Route path='' element ={<Home/>}/>
       <Route path='/' element ={<Home/>}/>
       <Route path='/team' element ={<Team/>}/>
       <Route path='/about' element ={<About/>}/>
