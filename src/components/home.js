@@ -1,6 +1,16 @@
 import React from "react";
 import "../assets/main.css";
 import { Link } from "react-router-dom";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from 'react-accessible-accordion';
+import 'react-accessible-accordion/dist/fancy-example.css';
 import img1 from "../assets/gallery/1.JPG";
 import img2 from "../assets/gallery/2.JPG";
 import img3 from "../assets/gallery/3.JPG";
@@ -13,6 +23,12 @@ import ishita from "../assets/gallery/ishita.jpg";
 import carousel_1 from "../assets/carousel_1.jpg";
 import carousel_2 from "../assets/carousel_2.JPG";
 import carousel_3 from "../assets/carousel_3.jpg";
+import carousel_4 from "../assets/carousel_4.jpg";
+import carousel_5 from "../assets/carousel_5.jpg";
+import carousel_6 from "../assets/carousel_6.jpg";
+import carousel_7 from "../assets/carousel_7.jpg";
+import carousel_8 from "../assets/carousel_8.jpg";
+import carousel_9 from "../assets/carousel_9.jpg";
 import ktm from "../assets/ktm_show.JPG";
 import glow_run from "../assets/glow_run.JPG";
 import science from "../assets/science.jpg";
@@ -27,7 +43,7 @@ import lakme from "../assets/sponsors/lakme.png";
 import bajaj from "../assets/sponsors/bajaj.png";
 import sbi from "../assets/sponsors/Sbi.png";
 
-import { Carousel, Collapse, initTE } from "tw-elements";
+import {Collapse, initTE } from "tw-elements";
 
 
 function Home() {
@@ -37,8 +53,40 @@ function Home() {
   return (
     <div id="home">
 
+
 {/* Carousel */}
-      <div
+
+<Carousel autoPlay="true" infiniteLoop="true" showThumbs="false" dynamicHeight="true" showStatus="false" showIndicators="false">
+                <div>
+                    <img src={carousel_1} alt="club 20"/>
+                </div>
+                <div>
+                    <img src={carousel_2} alt="club 20"/>
+                </div>
+                <div>
+                    <img src={carousel_3} alt="club 20"/>
+                </div>
+                <div>
+                    <img src={carousel_4} alt="club 20"/>
+                </div>
+                <div>
+                    <img src={carousel_5} alt="club 20"/>
+                </div>
+                <div>
+                    <img src={carousel_6} alt="club 20"/>
+                </div>
+                <div>
+                    <img src={carousel_7} alt="club 20"/>
+                </div>
+                <div>
+                    <img src={carousel_8} alt="club 20"/>
+                </div>
+                <div>
+                    <img src={carousel_9} alt="club 20"/>
+                </div>
+            </Carousel>
+
+      {/* <div
         id="carouselExampleControls"
         className="relative"
         data-te-carousel-init
@@ -126,7 +174,7 @@ function Home() {
             Next
           </span>
         </button>
-      </div>
+      </div> */}
 
 {/* What we do */}
       <section className="text-gray-600 body-font">
@@ -609,192 +657,74 @@ function Home() {
 
 {/* FAQs Accordian */}
       <div className="accordian m-4 !mt-8 !mb-20">
-        <div id="accordionFlushExample">
-          <div className="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
-            <h2 className="mb-0" id="flush-headingOne">
-              <button
-                className="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
-                type="button"
-                data-te-collapse-init
-                data-te-target="#flush-collapseOne"
-                aria-expanded="false"
-                aria-controls="flush-collapseOne"
-              >
-                What is the main objective of Club Twenty?
-                <span className="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    className="h-6 w-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </h2>
-            <div
-              id="flush-collapseOne"
-              className="!visible border-0"
-              data-te-collapse-item
-              data-te-collapse-show
-              aria-labelledby="flush-headingOne"
-              data-te-parent="#accordionFlushExample"
-            >
-              <div className="px-5 py-4">
-                Club Twenty aims to foster student leadership and holistic
+      <Accordion>
+            <AccordionItem>
+                <AccordionItemHeading>
+                    <AccordionItemButton>
+                    What is the main objective of Club Twenty?
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                    <p>
+                    Club Twenty aims to foster student leadership and holistic
                 growth by organizing diverse extracurricular activities,
                 providing opportunities for skill development, and creating a
                 culture of all-around development.
-              </div>
-            </div>
-          </div>
-          <div className="rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
-            <h2 className="mb-0" id="flush-headingTwo">
-              <button
-                className="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
-                type="button"
-                data-te-collapse-init
-                data-te-collapse-collapsed
-                data-te-target="#flush-collapseTwo"
-                aria-expanded="false"
-                aria-controls="flush-collapseTwo"
-              >
-                Can you provide examples of events organized by Club Twenty?
-                <span className="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    className="h-6 w-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </h2>
-            <div
-              id="flush-collapseTwo"
-              className="!visible hidden border-0"
-              data-te-collapse-item
-              aria-labelledby="flush-headingTwo"
-              data-te-parent="#accordionFlushExample"
-            >
-              <div className="px-5 py-4">
-                Certainly! Club Twenty has orchestrated significant events like
+                    </p>
+                </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem>
+                <AccordionItemHeading>
+                    <AccordionItemButton>
+                    Can you provide examples of events organized by Club Twenty?
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                    <p>
+                    Certainly! Club Twenty has orchestrated significant events like
                 the Indian Science Congress, National Annual Convention of the
                 National Association for architecture students (NASA), Glow Run,
                 Race for Grace, and more, engaging over 2000 participants in
                 total.
-              </div>
-            </div>
-          </div>
-          <div className="rounded-none border border-b-0 border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
-            <h2 className="mb-0" id="flush-headingThree">
-              <button
-                className="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
-                type="button"
-                data-te-collapse-init
-                data-te-collapse-collapsed
-                data-te-target="#flush-collapseThree"
-                aria-expanded="false"
-                aria-controls="flush-collapseThree"
-              >
-                How does Club Twenty facilitate skill development?
-                <span className="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    className="h-6 w-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </h2>
-            <div
-              id="flush-collapseThree"
-              className="!visible hidden"
-              data-te-collapse-item
-              aria-labelledby="flush-headingThree"
-              data-te-parent="#accordionFlushExample"
-            >
-              <div className="px-5 py-4">
-                The club's diverse talent pool creates an environment for
+                    </p>
+                </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem>
+                <AccordionItemHeading>
+                    <AccordionItemButton>
+                    How does Club Twenty facilitate skill development?
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                    <p>
+                    The club's diverse talent pool creates an environment for
                 learning and sharing skills. Members can enrich their abilities
                 through interaction with experienced seniors and fellow peers,
                 contributing to their personal growth journey.
-              </div>
-            </div>
-          </div>
-          <div className="rounded-none border border-b-0 border-l-0 border-r-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-neutral-800">
-            <h2 className="mb-0" id="flush-headingFour">
-              <button
-                className="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
-                type="button"
-                data-te-collapse-init
-                data-te-collapse-collapsed
-                data-te-target="#flush-collapseFour"
-                aria-expanded="false"
-                aria-controls="flush-collapseFour"
-              >
-                How can I join Club Twenty and become a member?
-                <span className="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    className="h-6 w-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </h2>
-            <div
-              id="flush-collapseFour"
-              className="!visible hidden"
-              data-te-collapse-item
-              aria-labelledby="flush-headingFour"
-              data-te-parent="#accordionFlushExample"
-            >
-              <div className="px-5 py-4">
-                Joining Club Twenty is a fantastic decision! Membership details
+                    </p>
+                </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem>
+                <AccordionItemHeading>
+                    <AccordionItemButton>
+                    How can I join Club Twenty and become a member?
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                    <p>
+                    Joining Club Twenty is a fantastic decision! Membership details
                 are usually provided through recruitment drives or announcements
                 at the beginning of each academic year. Stay tuned to the club's
                 official communications and social media channels for updates on
                 how to become a part of this dynamic community focused on
                 leadership and holistic growth.
-              </div>
-            </div>
-          </div>
-        </div>
+                    </p>
+                </AccordionItemPanel>
+            </AccordionItem>
+        </Accordion>
       </div>
+      
+      
     </div>
   );
 }

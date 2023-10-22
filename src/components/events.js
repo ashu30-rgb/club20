@@ -12,6 +12,7 @@ import science from "../assets/science.jpg";
 import snd from "../assets/snd.JPG";
 import bhangra from "../assets/bhangra.jpg";
 import CnW from "../assets/CnW.jpg";
+import { Link } from "react-router-dom";
 
 function Events() {
   const allEvents = [
@@ -170,7 +171,8 @@ function Events() {
                 <div className="flex flex-wrap -m-4">
                   {allEvents.map((data) => (
                     <div className="p-4 md:w-1/3">
-                      <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                      <Link to="/event-details" className="clb-event-card h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                        <div>
                         <img
                           className="lg:h-48 md:h-36 w-full object-cover object-center"
                           src={data.image}
@@ -194,7 +196,8 @@ function Events() {
                             </span>
                           </div>
                         </div>
-                      </div>
+                        </div>
+                      </Link>
                     </div>
                   ))}
                 </div>

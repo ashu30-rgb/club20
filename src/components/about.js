@@ -59,7 +59,7 @@ function About() {
               <a href="#team">Team</a>
             </li>
             <li>
-              <a href="/events">Past Events</a>
+              <Link to="/events">Past Events</Link>
             </li>
           </ul>
         </div>

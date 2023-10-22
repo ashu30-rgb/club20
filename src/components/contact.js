@@ -1,28 +1,31 @@
-import React, { useState } from "react";
+import React, {useRef, useState} from "react";
 import { Link } from "react-router-dom";
+import emailjs from '@emailjs/browser';
+import Submitted from "./submitted";
+
 
 function Contact() {
 
-    const [formData, setFormData] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+    const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  const handleInputChange = (e, name) => {
-    let value = e.target.value;
-
-    setFormData((prevdata) => ({
-      ...prevdata,
-
-      [name]: value,
-    }));
+    emailjs.sendForm('service_h6kfx16', 'template_oegbdjo', form.current, '21tTaeAagT9Nf2Ljd')
+      .then((result) => {
+        setSubmitted(true)
+          console.log(result.text);
+        }, (error) => {
+          console.log(error.text);
+      });
   };
 
-  const formsubmit = () => {
-    setFormData({ name: "", email: "", message: "" });
-
-    console.log(formData);
-  };
 
   return (
+
     <>
+    {submitted===false?
+    <div>
       <section className="text-gray-600 body-font">
         <div className="container px-5 pt-8 mx-auto">
           <div className="text-center mb-0">
@@ -68,6 +71,12 @@ function Contact() {
                 <p className="mt-1">
                 Jalandhar - Delhi, Grand Trunk Rd, Phagwara, Punjab 144411
                 </p>
+
+                <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
+                  PHONE
+                </h2>
+
+                <p className="leading-relaxed">+91 7906440791</p>
               </div>
 
               <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
@@ -77,13 +86,12 @@ function Contact() {
 
                 <Link className="text-indigo-500 leading-relaxed">
                 clubtwentylpu@gmail.com
+                </Link><br/>
+                <Link className="text-indigo-500 leading-relaxed">
+                info@clubtwenty.in
                 </Link>
 
-                <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
-                  PHONE
-                </h2>
-
-                <p className="leading-relaxed">+91 7906440791</p>
+                
               </div>
             </div>
           </div>
@@ -97,6 +105,7 @@ function Contact() {
               Let's Collaborate and Elevate Together!
             </p>
 
+<form ref={form} onSubmit={sendEmail}>
             <div className="relative mb-4">
               <label for="name" className="leading-7 text-sm text-gray-600">
                 Name
@@ -104,13 +113,9 @@ function Contact() {
 
               <input
                 type="text"
-                value={formData.name}
                 id="name"
-                name="name"
+                name="user_name"
                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                onChange={(e) => {
-                  handleInputChange(e, "name");
-                }}
               />
             </div>
 
@@ -121,14 +126,20 @@ function Contact() {
 
               <input
                 type="email"
-                value={formData.email}
                 id="email"
-                name="email"
-                className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                onChange={(e) => {
-                  handleInputChange(e, "email");
-                }}
-              />
+                name="user_email"
+                className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+            </div>
+            <div className="relative mb-4">
+              <label for="mobile" className="leading-7 text-sm text-gray-600">
+                Mobile
+              </label>
+
+              <input
+                type="mobile"
+                id="email"
+                name="mobile"
+                className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
             </div>
 
             <div className="relative mb-4">
@@ -138,30 +149,27 @@ function Contact() {
 
               <textarea
                 id="message"
-                value={formData.message}
                 name="message"
                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                onChange={(e) => {
-                  handleInputChange(e, "message");
-                }}
               ></textarea>
             </div>
-
             <button
               className="text-white bg-[#4556B3] border-0 py-2 px-6 focus:outline-none hover:bg-[#364494] rounded text-lg"
-              onClick={formsubmit}
             >
               Submit
             </button>
-
+            </form>
             <p className="text-xs text-gray-500 mt-3">
               Your mail will be user for further notifications.
             </p>
           </div>
         </div>
       </section>
+      </div>: <Submitted/>}
     </>
   );
 }
 
 export default Contact;
+
+
