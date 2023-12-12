@@ -1,5 +1,6 @@
 import './App.css';
 import './assets/main.css'
+import React from 'react';
 import RouteContent from './route';
 import Header from './components/header';
 import Footer from './components/footer';

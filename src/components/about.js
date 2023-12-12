@@ -5,6 +5,9 @@ import ktm from "../assets/ktm_show.JPG";
 import glow_run from "../assets/glow_run.JPG";
 import science from "../assets/science.jpg";
 import our_story from "../assets/our_story.JPG";
+import CountUp from 'react-countup';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function About() {
   return (
@@ -398,8 +401,8 @@ function About() {
                         <circle cx="9" cy="7" r="4"></circle>
                         <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
                       </svg>
-                      <h2 className="title-font font-medium text-3xl text-gray-900">
-                        1K+
+                      <h2 className="title-font font-medium text-3xl text-gray-900" ata-aos="fade-in">
+                        <CountUp end={1000} />+
                       </h2>
                       <p className="leading-relaxed">Members</p>
                     </div>

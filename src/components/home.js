@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "../assets/main.css";
 import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -44,11 +44,17 @@ import bajaj from "../assets/sponsors/bajaj.png";
 import sbi from "../assets/sponsors/Sbi.png";
 
 import {Collapse, initTE } from "tw-elements";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 function Home() {
   initTE({ Carousel });
   initTE({ Collapse });
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
 
   return (
     <div id="home">
@@ -56,7 +62,7 @@ function Home() {
 
 {/* Carousel */}
 
-<Carousel autoPlay="true" infiniteLoop="true" showThumbs="false" dynamicHeight="true" showStatus="false" showIndicators="false">
+<Carousel autoPlay="true" infiniteLoop="true" showThumbs={false} dynamicHeight="true" showStatus={false} showIndicators="false">
                 <div>
                     <img src={carousel_1} alt="club 20"/>
                 </div>
@@ -197,21 +203,21 @@ function Home() {
       <div className="container mx-auto  px-0 md:px-16 py-2 lg:px-32 lg:pt-24 mb-4 md:mb-10">
         <div className="-m-1 flex flex-wrap md:-m-2">
           <div className="flex w-1/2 flex-wrap">
-            <div className="w-1/2 p-1 md:p-2">
-              <img
+            <div className="w-1/2 p-1 md:p-2" data-aos="zoom-in">
+              <img 
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
                 src={img1}
               />
             </div>
-            <div className="w-1/2 p-1 md:p-2">
+            <div className="w-1/2 p-1 md:p-2" data-aos="zoom-in">
               <img
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
                 src={img2}
               />
             </div>
-            <div className="w-full p-1 md:p-2">
+            <div className="w-full p-1 md:p-2" data-aos="zoom-in">
               <img
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
@@ -220,21 +226,21 @@ function Home() {
             </div>
           </div>
           <div className="flex w-1/2 flex-wrap">
-            <div className="w-full p-1 md:p-2">
+            <div className="w-full p-1 md:p-2" data-aos="zoom-in"> 
               <img
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
                 src={img4}
               />
             </div>
-            <div className="w-1/2 p-1 md:p-2">
+            <div className="w-1/2 p-1 md:p-2" data-aos="zoom-in">
               <img
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
                 src={img5}
               />
             </div>
-            <div className="w-1/2 p-1 md:p-2">
+            <div className="w-1/2 p-1 md:p-2" data-aos="zoom-in">
               <img
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
@@ -389,34 +395,34 @@ function Home() {
             </div>
           </div>
           <div className="sponsors grid grid-cols-2 md:grid-cols-5 gap-5">
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center">
+            <div className="col-span-1 px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
               <img src={hexo} alt="Hexo Tech" />
             </div>
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center">
+            <div className="col-span-1 px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
               <img src={nivia} alt="Nivia" />
             </div>
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center">
+            <div className="col-span-1 px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
               <img src={oppo} alt="Oppo" />
             </div>
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center">
+            <div className="col-span-1 px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
               <img src={sktm} alt="KTM" />
             </div>
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center">
+            <div className="col-span-1 px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
               <img src={re} alt="Royal Enfield" />
             </div>
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center">
+            <div className="col-span-1 px-4 flex flex-col justify-center items-center"  data-aos="zoom-in">
               <img src={toyota} alt="Toyota" />
             </div>
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center">
+            <div className="col-span-1 px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
               <img src={decathlon} alt="Decathlon" />
             </div>
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center">
+            <div className="col-span-1 px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
               <img className="my-auto" src={lakme} alt="Lakme" />
             </div>
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center">
+            <div className="col-span-1 px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
               <img src={bajaj} alt="Bajaj" />
             </div>
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center">
+            <div className="col-span-1 px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
               <img width="75%" src={sbi} alt="SBI" />
             </div>
           </div>
@@ -426,7 +432,7 @@ function Home() {
 
 {/* Upcoming Events */}
       <section className="text-gray-600 body-font">
-        <div className="container px-0 md:!px-5 py-24 mx-auto">
+        <div className="container px-0 md:!px-5 py-24 mx-auto overflow-x-hidden">
           <div className="text-center mb-20">
             <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-[#41cea1] mb-4">
               Our Upcoming Events
@@ -440,7 +446,7 @@ function Home() {
           </div>
           <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
             <div className="p-2 sm:w-1/2 w-full">
-              <div className="bg-gray-100 rounded flex p-4 h-full items-center">
+              <div className="bg-gray-100 rounded flex p-4 h-full items-center" data-aos="fade-right">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -459,7 +465,7 @@ function Home() {
               </div>
             </div>
             <div className="p-2 sm:w-1/2 w-full">
-              <div className="bg-gray-100 rounded flex p-4 h-full items-center">
+              <div className="bg-gray-100 rounded flex p-4 h-full items-center" data-aos="fade-left">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -478,7 +484,7 @@ function Home() {
               </div>
             </div>
             <div className="p-2 sm:w-1/2 w-full">
-              <div className="bg-gray-100 rounded flex p-4 h-full items-center">
+              <div className="bg-gray-100 rounded flex p-4 h-full items-center" data-aos="fade-right">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -495,7 +501,7 @@ function Home() {
               </div>
             </div>
             <div className="p-2 sm:w-1/2 w-full">
-              <div className="bg-gray-100 rounded flex p-4 h-full items-center">
+              <div className="bg-gray-100 rounded flex p-4 h-full items-center" data-aos="fade-left">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -512,7 +518,7 @@ function Home() {
               </div>
             </div>
             <div className="p-2 sm:w-1/2 w-full">
-              <div className="bg-gray-100 rounded flex p-4 h-full items-center">
+              <div className="bg-gray-100 rounded flex p-4 h-full items-center" data-aos="fade-right">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -529,7 +535,7 @@ function Home() {
               </div>
             </div>
             <div className="p-2 sm:w-1/2 w-full">
-              <div className="bg-gray-100 rounded flex p-4 h-full items-center">
+              <div className="bg-gray-100 rounded flex p-4 h-full items-center" data-aos="fade-left">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -572,7 +578,7 @@ function Home() {
         </div>
 
         <div className="grid gap-6 text-center md:grid-cols-3">
-          <div>
+          <div data-aos="zoom-in">
             <div className="block rounded-lg bg-white shadow-lg dark:bg-neutral-700 dark:shadow-black/30">
               <div className="h-28 overflow-hidden rounded-t-lg bg-[#5ACAA7]"></div>
               <div className="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
@@ -599,7 +605,7 @@ function Home() {
             </div>
           </div>
 
-          <div>
+          <div data-aos="zoom-in"> 
             <div className="block rounded-lg bg-white shadow-lg dark:bg-neutral-700 dark:shadow-black/30">
               <div className="h-28 overflow-hidden rounded-t-lg bg-[#4556B3]"></div>
               <div className="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
@@ -626,7 +632,7 @@ function Home() {
             </div>
           </div>
 
-          <div>
+          <div data-aos="zoom-in">
             <div className="block rounded-lg bg-white shadow-lg dark:bg-neutral-700 dark:shadow-black/30">
               <div className="h-28 overflow-hidden rounded-t-lg bg-[#00A5C5]"></div>
               <div className="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
