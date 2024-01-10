@@ -11,40 +11,39 @@ import {
   AccordionItemPanel,
 } from 'react-accessible-accordion';
 import 'react-accessible-accordion/dist/fancy-example.css';
-import img1 from "../assets/gallery/1.JPG";
-import img2 from "../assets/gallery/2.JPG";
-import img3 from "../assets/gallery/3.JPG";
-import img4 from "../assets/gallery/4.jpg";
-import img5 from "../assets/gallery/5.jpg";
-import img6 from "../assets/gallery/6.JPG";
-import ashu from "../assets/gallery/ashu.jpg";
-import rakesh from "../assets/gallery/rakesh.jpg";
-import ishita from "../assets/gallery/ishita.jpg";
+import img1 from "../assets/gallery/1.webp";
+import img2 from "../assets/gallery/2.webp";
+import img3 from "../assets/gallery/3.webp";
+import img4 from "../assets/gallery/4.webp";
+import img5 from "../assets/gallery/5.webp";
+import img6 from "../assets/gallery/6.webp";
+import ashu from "../assets/gallery/ashu.webp";
+import rakesh from "../assets/gallery/rakesh.webp";
+import ishita from "../assets/gallery/ishita.webp";
 import carousel_1 from "../assets/carousel_1.jpg";
-import carousel_2 from "../assets/carousel_2.JPG";
 import carousel_3 from "../assets/carousel_3.jpg";
 import carousel_4 from "../assets/carousel_4.jpg";
 import carousel_5 from "../assets/carousel_5.jpg";
 import carousel_6 from "../assets/carousel_6.jpg";
-import carousel_7 from "../assets/carousel_7.jpg";
 import carousel_8 from "../assets/carousel_8.jpg";
 import carousel_9 from "../assets/carousel_9.jpg";
-import ktm from "../assets/ktm_show.JPG";
-import glow_run from "../assets/glow_run.JPG";
-import science from "../assets/science.jpg";
-import hexo from "../assets/sponsors/hexo tech.png";
-import nivia from "../assets/sponsors/Nivia png.png";
-import oppo from "../assets/sponsors/oppo png.png";
-import sktm from "../assets/sponsors/sktm.png";
-import re from "../assets/sponsors/royal Enfield png.png";
-import toyota from "../assets/sponsors/Toyota png.png";
-import decathlon from "../assets/sponsors/decathlon.png";
-import lakme from "../assets/sponsors/lakme.png";
-import bajaj from "../assets/sponsors/bajaj.png";
-import sbi from "../assets/sponsors/Sbi.png";
+import GLOWRUN from "../assets/events/GLOWRUN ELECTRICA.jpg";
+import KTM from "../assets/events/KTM STUNT SHOW.jpg";
+import isc from "../assets/events/INDIAN SCIENCE CONGRESS (ICS).jpg";
+import hexo from "../assets/sponsors/hexo tech.webp";
+import nivia from "../assets/sponsors/Nivia png.webp";
+import oppo from "../assets/sponsors/oppo png.webp";
+import sktm from "../assets/sponsors/sktm.webp";
+import re from "../assets/sponsors/royal Enfield png.webp";
+import toyota from "../assets/sponsors/Toyota png.webp";
+import decathlon from "../assets/sponsors/decathlon.webp";
+import lakme from "../assets/sponsors/lakme.webp";
+import bajaj from "../assets/sponsors/bajaj.webp";
+import sbi from "../assets/sponsors/Sbi.webp";
+import faq from "../assets/icons/FAQs-bro.svg"
 
 import {Collapse, initTE } from "tw-elements";
-import AOS from 'aos';
+import aos from 'aos';
 import 'aos/dist/aos.css';
 
 
@@ -53,7 +52,7 @@ function Home() {
   initTE({ Collapse });
 
   useEffect(() => {
-    AOS.init();
+    aos.init();
   }, [])
 
   return (
@@ -62,12 +61,9 @@ function Home() {
 
 {/* Carousel */}
 
-<Carousel autoPlay="true" infiniteLoop="true" showThumbs={false} dynamicHeight="true" showStatus={false} showIndicators="false">
+<Carousel autoPlay="true" infiniteLoop="true" showThumbs={false} dynamicHeight={false} showStatus={false} showIndicators={false}>
                 <div>
                     <img src={carousel_1} alt="club 20"/>
-                </div>
-                <div>
-                    <img src={carousel_2} alt="club 20"/>
                 </div>
                 <div>
                     <img src={carousel_3} alt="club 20"/>
@@ -80,9 +76,6 @@ function Home() {
                 </div>
                 <div>
                     <img src={carousel_6} alt="club 20"/>
-                </div>
-                <div>
-                    <img src={carousel_7} alt="club 20"/>
                 </div>
                 <div>
                     <img src={carousel_8} alt="club 20"/>
@@ -186,14 +179,11 @@ function Home() {
       <section className="text-gray-600 body-font">
         <div className="container px-0 md:!px-5 py-5 md:py-24 mx-auto">
           <div className="text-center">
-            <h1 className="!text-3xl md:!text-4xl font-medium text-center title-font text-[#41cea1] drop-shadow-sm mb-4">
+            <h1 className="text-3xl md:text-4xl font-semibold md:font-bold text-center title-font text-[#046EC1] drop-shadow-sm mb-4">
               What We do
             </h1>
-            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-              Established in 2017, Club Twenty drives student leadership and
-              holistic growth through 70+ events like Indian Science Congress.
-              Tier 5 status showcases commitment to student development and
-              diverse activities.
+            <p className="text-base lg:text-lg leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+            Founded in 2017, Club Twenty is a catalyst for student leadership and overall development, hosting over 100 diverse events. From marathons to EDM nights, social gatherings to sports competitions, corporate functions to cultural celebrations, we curate experiences that resonate with a wide audience.
             </p>
           </div>
         </div>
@@ -204,14 +194,14 @@ function Home() {
         <div className="-m-1 flex flex-wrap md:-m-2">
           <div className="flex w-1/2 flex-wrap">
             <div className="w-1/2 p-1 md:p-2" data-aos="zoom-in">
-              <img 
+              <img loading=" lazy"
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
                 src={img1}
               />
             </div>
             <div className="w-1/2 p-1 md:p-2" data-aos="zoom-in">
-              <img
+              <img loading=" lazy"
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
                 src={img2}
@@ -227,21 +217,21 @@ function Home() {
           </div>
           <div className="flex w-1/2 flex-wrap">
             <div className="w-full p-1 md:p-2" data-aos="zoom-in"> 
-              <img
+              <img loading=" lazy"
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
                 src={img4}
               />
             </div>
             <div className="w-1/2 p-1 md:p-2" data-aos="zoom-in">
-              <img
+              <img loading=" lazy"
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
                 src={img5}
               />
             </div>
             <div className="w-1/2 p-1 md:p-2" data-aos="zoom-in">
-              <img
+              <img loading=" lazy"
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
                 src={img6}
@@ -256,119 +246,59 @@ function Home() {
         <div className="container px-0 md:px-5 py-24 mx-auto">
           <div className="flex flex-col">
             <div className="h-1 bg-gray-200 rounded overflow-hidden">
-              <div className="w-24 h-full bg-#4556B3]"></div>
+              <div className="w-24 h-full bg-[#046EC1]"></div>
             </div>
             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-              <h1 className="sm:w-2/5 text-[#41cea1] font-medium title-font text-2xl mb-2 sm:mb-0">
+              <h1 className="sm:w-2/5 text-[#046EC1] text-3xl md:text-4xl font-semibold  title-font  mb-2 sm:mb-0">
                 Our Past events
               </h1>
-              <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">
-                Certainly! Here are some of the notable past events meticulously
-                organized by the proactive members of Club Twenty, showcasing
-                their dedication to holistic growth and fostering leadership
-                skills among students:
-              </p>
             </div>
           </div>
           <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-            <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
-              <div className="rounded-lg h-64 overflow-hidden">
-                <img
-                  alt="content"
-                  className="object-cover object-center h-full w-full"
-                  src={glow_run}
-                />
-              </div>
-              <h2 className="text-xl font-medium title-font text-gray-900 mt-5">
-                Glow Run
-              </h2>
-              <p className="text-base leading-relaxed mt-2">
-                A national event, Night marathon, supporting and spreading
-                awareness about a Fit india Campaign and also 50k+ trees were
-                donated by Club20 to support farmes in south india
-              </p>
-              <Link
-                to="/events"
-                className="text-[#4556B3] inline-flex items-center mt-3"
-              >
-                Learn More
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </Link>
+            <div className="p-4 md:w-1/3 clb-evnt-card">
+                      <Link to="/events" className="">
+                        <div data-aos="fade-up">
+                          <img loading=" lazy" className="lg:h-48 md:h-36 w-full object-cover object-center rounded-md" src={GLOWRUN} alt="event"/>
+                          <div className="p-6">
+                            <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                              Night Marathon
+                            </h2>
+                            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                            Glow Run
+                            </h1>
+                          </div>
+                        </div>
+                      </Link>
             </div>
-            <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
-              <div className="rounded-lg h-64 overflow-hidden">
-                <img
-                  alt="content"
-                  className="object-cover object-center h-full w-full"
-                  src={ktm}
-                />
-              </div>
-              <h2 className="text-xl font-medium title-font text-gray-900 mt-5">
-                KTM Stunt Show
-              </h2>
-              <p className="text-base leading-relaxed mt-2">
-                KTM stunt show orgainsed by Club20 association with KTM.
-              </p>
-              <Link
-                to="/events"
-                className="text-[#4556B3] inline-flex items-center mt-3"
-              >
-                Learn More
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </Link>
+            <div className="p-4 md:w-1/3 clb-evnt-card">
+                      <Link to="/events" className="">
+                        <div data-aos="fade-up">
+                          <img loading=" lazy" className="lg:h-48 md:h-36 w-full object-cover object-center rounded-md" src={KTM} alt="event"/>
+                          <div className="p-6">
+                            <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                              Stunt Show
+                            </h2>
+                            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                            KTM Stunt Show
+                            </h1>
+                          </div>
+                        </div>
+                      </Link>
             </div>
-            <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
-              <div className="rounded-lg h-64 overflow-hidden">
-                <img
-                  alt="content"
-                  className="object-cover object-center h-full w-full"
-                  src={science}
-                />
-              </div>
-              <h2 className="text-xl font-medium title-font text-gray-900 mt-5">
-                Science Exhibition
-              </h2>
-              <p className="text-base leading-relaxed mt-2">
-                Science exhibition with 15k+ delegates held in presence of
-                honorable Prime Minister Shri. Narendra modi ji
-              </p>
-              <Link
-                to="/events"
-                className="text-[#4556B3] inline-flex items-center mt-3"
-              >
-                Learn More
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </Link>
+            <div className="p-4 md:w-1/3 clb-evnt-card">
+                      <Link to="/events" className="">
+                        <div data-aos="fade-up">
+                          <img loading=" lazy" className="lg:h-48 md:h-36 w-full object-cover object-center rounded-md" src={isc} alt="event"/>
+                          <div className="p-6">
+                            <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                              Educational
+                            </h2>
+                            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                            Science Exhibition
+                            </h1>
+                          </div>
+                        </div>
+                      </Link>
             </div>
           </div>
         </div>
@@ -379,51 +309,47 @@ function Home() {
         <div className="container px-0 md:px-5 py-24 mx-auto">
           <div className="flex flex-col">
             <div className="h-1 bg-gray-200 rounded overflow-hidden">
-              <div className="w-24 h-full bg-#4556B3]"></div>
+              <div className="w-24 h-full bg-[#046EC1]"></div>
             </div>
             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-              <h1 className="sm:w-2/5 text-[#41cea1] font-medium title-font text-2xl mb-2 sm:mb-0">
+              <h1 className="sm:w-2/5 text-[#046EC1] text-3xl md:text-4xl font-semibold title-font mb-2 sm:mb-0">
                 Our Partners and Sponsors
               </h1>
-              <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">
-                Club Twenty extends its heartfelt gratitude to our esteemed
-                sponsors whose unwavering support fuels the success of our
-                initiatives. These dedicated partners share our vision of
-                fostering holistic growth and leadership development among
-                students.
+              <p className="sm:w-3/5 leading-relaxed md:text-lg sm:pl-10 pl-0">
+              Club Twenty expresses sincere appreciation to our valued sponsors and partners whose steadfast support propels the success of our initiatives. Aligned with our vision for fostering holistic growth and leadership development among students, these dedicated collaborators play a pivotal role in making our endeavors impactful. Together, we create a powerful synergy that amplifies the positive impact on students' lives and contributes to the success of our shared goals.
               </p>
             </div>
           </div>
           <div className="sponsors grid grid-cols-2 md:grid-cols-5 gap-5">
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
-              <img src={hexo} alt="Hexo Tech" />
+            <div className="col-span-1 md:px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
+              <img loading="lazy" className="w-full h-fit" width="170" height="170" src={hexo} alt="Hexo Tech" />
             </div>
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
-              <img src={nivia} alt="Nivia" />
+            <div className="col-span-1 md:px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
+              <img loading="lazy" className="w-full h-fit" width="170" height="170" src={nivia} alt="Nivia" />
             </div>
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
-              <img src={oppo} alt="Oppo" />
+            <div className="col-span-1 md:px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
+              <img loading="lazy" className="w-full h-fit" width="170" height="170" src={oppo} alt="Oppo" />
             </div>
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
-              <img src={sktm} alt="KTM" />
+            <div className="col-span-1 md:px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
+              <img loading="lazy" className="w-full h-fit" width="170" height="170" src={sktm} alt="KTM" />
             </div>
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
-              <img src={re} alt="Royal Enfield" />
+            <div className="col-span-1 md:px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
+              <img loading="lazy" className="w-full h-fit" width="170" height="170" src={re} alt="Royal Enfield" />
             </div>
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center"  data-aos="zoom-in">
-              <img src={toyota} alt="Toyota" />
+            <div className="col-span-1 md:px-4 flex flex-col justify-center items-center"  data-aos="zoom-in">
+              <img loading="lazy" className="w-full h-fit" width="170" height="170" src={toyota} alt="Toyota" />
             </div>
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
-              <img src={decathlon} alt="Decathlon" />
+            <div className="col-span-1 md:px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
+              <img loading="lazy" className="w-full h-fit" width="170" height="170" src={decathlon} alt="Decathlon" />
             </div>
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
-              <img className="my-auto" src={lakme} alt="Lakme" />
+            <div className="col-span-1 md:px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
+              <img loading="lazy" width="170" height="170" className="my-auto w-full h-fit" src={lakme} alt="Lakme" />
             </div>
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
-              <img src={bajaj} alt="Bajaj" />
+            <div className="col-span-1 md:px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
+              <img loading="lazy" className="w-full h-fit" width="170" height="170" src={bajaj} alt="Bajaj" />
             </div>
-            <div className="col-span-1 px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
-              <img width="75%" src={sbi} alt="SBI" />
+            <div className="col-span-1 md:px-4 flex flex-col justify-center items-center" data-aos="zoom-in">
+              <img loading="lazy" height="auto" className="w-3/4 h-fit" src={sbi} alt="SBI" />
             </div>
           </div>
         </div>
@@ -432,16 +358,13 @@ function Home() {
 
 {/* Upcoming Events */}
       <section className="text-gray-600 body-font">
-        <div className="container px-0 md:!px-5 py-24 mx-auto overflow-x-hidden">
+        <div className="container px-0 md:!px-5 py-20 mx-auto overflow-x-hidden">
           <div className="text-center mb-20">
-            <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-[#41cea1] mb-4">
+            <h1 className="text-3xl md:text-4xl font-semibold md:font-bold text-center title-font text-[#046EC1] mb-4">
               Our Upcoming Events
             </h1>
-            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-              Stay tuned for an array of engaging experiences as Club Twenty
-              gears up for its forthcoming events.Join us in these endeavors as
-              we continue to shape a dynamic and vibrant community dedicated to
-              growth and excellence.
+            <p className="md:text-lg leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+            Explore the excitement with Club Twenty's upcoming events! Get ready for a diverse range of engaging experiences that promise to captivate and inspire. Join us on this journey as we strive to foster a dynamic and vibrant community dedicated to continuous growth and excellence. Stay tuned for what's in store, and be part of the energy that propels us forward!
             </p>
           </div>
           <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
@@ -453,7 +376,7 @@ function Home() {
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="3"
-                  className="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4"
+                  className="text-[#02C7A4] w-6 h-6 flex-shrink-0 mr-4"
                   viewBox="0 0 24 24"
                 >
                   <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
@@ -472,7 +395,7 @@ function Home() {
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="3"
-                  className="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4"
+                  className="text-[#02C7A4] w-6 h-6 flex-shrink-0 mr-4"
                   viewBox="0 0 24 24"
                 >
                   <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
@@ -491,7 +414,7 @@ function Home() {
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="3"
-                  className="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4"
+                  className="text-[#02C7A4] w-6 h-6 flex-shrink-0 mr-4"
                   viewBox="0 0 24 24"
                 >
                   <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
@@ -508,7 +431,7 @@ function Home() {
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="3"
-                  className="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4"
+                  className="text-[#02C7A4] w-6 h-6 flex-shrink-0 mr-4"
                   viewBox="0 0 24 24"
                 >
                   <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
@@ -525,7 +448,7 @@ function Home() {
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="3"
-                  className="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4"
+                  className="text-[#02C7A4] w-6 h-6 flex-shrink-0 mr-4"
                   viewBox="0 0 24 24"
                 >
                   <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
@@ -542,7 +465,7 @@ function Home() {
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="3"
-                  className="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4"
+                  className="text-[#02C7A4] w-6 h-6 flex-shrink-0 mr-4"
                   viewBox="0 0 24 24"
                 >
                   <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
@@ -555,7 +478,7 @@ function Home() {
             </div>
           </div>
           <Link to="/events">
-            <button className="flex mx-auto mt-16 text-white bg-[#4556B3] border-0 py-2 px-8 focus:outline-none hover:bg-[#364494] rounded text-lg">
+            <button className="flex mx-auto mt-16 text-white bg-[#02C7A4] border-0 py-2 px-8 focus:outline-none hover:bg-[#364494] rounded text-lg">
               Past Events
             </button>
           </Link>
@@ -567,13 +490,11 @@ function Home() {
 {/* Testimonials */}
       <section className="text-neutral-700 dark:text-neutral-300 m-4 !my-12 lg:!my-24 lg:!mx-16">
         <div className="mx-auto text-center md:max-w-xl lg:max-w-3xl">
-          <h3 className="mb-6 text-3xl font-bold text-[#41cea1]">
+          <h3 className="mb-6 text-3xl md:text-4xl font-semibold md:font-bold text-[#046EC1]">
             Testimonials
           </h3>
-          <p className="mb-6 pb-2 md:mb-12 md:pb-0">
-            Explore participant insights on Club Twenty's impactful events like
-            the Indian Science Congress and Glow Run, showcasing its role in
-            fostering personal growth and inclusive campus culture.
+          <p className="mb-6 md:text-lg pb-2 md:mb-12 md:pb-0">
+          Discover what our community has to say about Club Twenty! Dive into heartfelt testimonials from our members, sharing their experiences and insights on the transformative journey within our events.
           </p>
         </div>
 
@@ -582,7 +503,7 @@ function Home() {
             <div className="block rounded-lg bg-white shadow-lg dark:bg-neutral-700 dark:shadow-black/30">
               <div className="h-28 overflow-hidden rounded-t-lg bg-[#5ACAA7]"></div>
               <div className="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
-                <img src={ashu} alt="Testimonial" />
+                <img loading=" lazy" className="w-full h-hull"  src={ashu} alt="Testimonial" />
               </div>
               <div className="p-6">
                 <h4 className="mb-4 text-2xl font-semibold">Ashutosh</h4>
@@ -609,7 +530,7 @@ function Home() {
             <div className="block rounded-lg bg-white shadow-lg dark:bg-neutral-700 dark:shadow-black/30">
               <div className="h-28 overflow-hidden rounded-t-lg bg-[#4556B3]"></div>
               <div className="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
-                <img src={rakesh} alt="Testimonial" />
+                <img loading=" lazy" className="w-full h-hull" src={rakesh} alt="Testimonial" />
               </div>
               <div className="p-6">
                 <h4 className="mb-4 text-2xl font-semibold">Rakesh</h4>
@@ -636,7 +557,7 @@ function Home() {
             <div className="block rounded-lg bg-white shadow-lg dark:bg-neutral-700 dark:shadow-black/30">
               <div className="h-28 overflow-hidden rounded-t-lg bg-[#00A5C5]"></div>
               <div className="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
-                <img src={ishita} alt="Testimonial" />
+                <img loading=" lazy" className="w-full h-hull" src={ishita} alt="Testimonial" />
               </div>
               <div className="p-6">
                 <h4 className="mb-4 text-2xl font-semibold">Ishita</h4>
@@ -662,40 +583,38 @@ function Home() {
       </section>
 
 {/* FAQs Accordian */}
+<div className="w-screen flex items-center justify-center px-8">
+  <img loading=" lazy" src={faq} alt="FAQS" data-aos="fade-up" className="w-full max-w-xl mx-auto"></img>
+</div>
+
+
       <div className="accordian m-4 !mt-8 !mb-20">
-      <Accordion>
-            <AccordionItem>
+      <Accordion allowZeroExpanded={true} allowMultipleExpanded={true}>
+            <AccordionItem data-aos="fade-right">
                 <AccordionItemHeading>
                     <AccordionItemButton>
-                    What is the main objective of Club Twenty?
+                    What Drives Club Twenty's Mission?
                     </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                     <p>
-                    Club Twenty aims to foster student leadership and holistic
-                growth by organizing diverse extracurricular activities,
-                providing opportunities for skill development, and creating a
-                culture of all-around development.
+                    Club Twenty is driven by the mission to cultivate student leadership and holistic growth. Our main objective is to organize diverse extracurricular activities, providing a platform for skill development and fostering a culture of all-around personal and professional development.
                     </p>
                 </AccordionItemPanel>
             </AccordionItem>
-            <AccordionItem>
+            <AccordionItem data-aos="fade-right">
                 <AccordionItemHeading>
                     <AccordionItemButton>
-                    Can you provide examples of events organized by Club Twenty?
+                    Can You Share Examples of Club Twenty's Impactful Events?
                     </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                     <p>
-                    Certainly! Club Twenty has orchestrated significant events like
-                the Indian Science Congress, National Annual Convention of the
-                National Association for architecture students (NASA), Glow Run,
-                Race for Grace, and more, engaging over 2000 participants in
-                total.
+                    Absolutely! Club Twenty has successfully organized noteworthy events such as the Indian Science Congress, Glowrun Electrica, Race for Grace, The Fitness Talk, Sports Utsav, and more. These events have collectively engaged over 2000 participants, contributing to our vibrant and dynamic community.
                     </p>
                 </AccordionItemPanel>
             </AccordionItem>
-            <AccordionItem>
+            <AccordionItem data-aos="fade-right">
                 <AccordionItemHeading>
                     <AccordionItemButton>
                     How does Club Twenty facilitate skill development?
@@ -703,27 +622,19 @@ function Home() {
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                     <p>
-                    The club's diverse talent pool creates an environment for
-                learning and sharing skills. Members can enrich their abilities
-                through interaction with experienced seniors and fellow peers,
-                contributing to their personal growth journey.
+                    Club Twenty's diverse talent pool creates an enriching environment for skill development. Members have the opportunity to learn and share skills through interactions with experienced seniors and fellow peers, contributing significantly to their personal and professional growth.
                     </p>
                 </AccordionItemPanel>
             </AccordionItem>
-            <AccordionItem>
+            <AccordionItem data-aos="fade-right">
                 <AccordionItemHeading>
                     <AccordionItemButton>
-                    How can I join Club Twenty and become a member?
+                    How Can I Join Club Twenty and Become a member?
                     </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                     <p>
-                    Joining Club Twenty is a fantastic decision! Membership details
-                are usually provided through recruitment drives or announcements
-                at the beginning of each academic year. Stay tuned to the club's
-                official communications and social media channels for updates on
-                how to become a part of this dynamic community focused on
-                leadership and holistic growth.
+                    Joining Club Twenty is an excellent decision! Membership details are typically communicated through recruitment drives or announcements at the beginning of each academic year. Stay updated by following the club's official communications and social media channels for information on how to become part of this dynamic community focused on leadership and holistic growth.
                     </p>
                 </AccordionItemPanel>
             </AccordionItem>

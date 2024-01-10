@@ -26,9 +26,11 @@ h1, h2, h3, h4{
 #home{
     min-height: 200vh;
     position: relative;
+    padding-bottom: 25px;
 }
 
 .App{
+    overflow-x: hidden;
     min-height: 100vh;
     position: relative;
 }
@@ -42,7 +44,7 @@ h1, h2, h3, h4{
 } */
 
 #app__content{
-    padding: 55px 0px 90px 0px;
+    padding: 55px 0px 878px 0px;
     transform: 0.8s;
     min-height: 100vh;
     background-color: #00e7e302;
@@ -108,10 +110,11 @@ color: #2d343e;
 }
 
 .join-sticker{
-    background-color: #4556B3;
+    background-color: #046EC1;
     padding: 8px 16px 8px 16px;
     color: white;
     height: fit-content;
+    font:bold;
     width: fit-content;
     text-align: center;
     border-radius: 4px;
@@ -120,15 +123,16 @@ color: #2d343e;
     right: -12px;
     top: 280px;
 }
-.back-to-top{
-    background-color: #5ACAA7;
+.whatsapp-sticker{
     padding:6px;
     color: white;
     text-align: center;
     border-radius: 50%;
+    cursor: pointer;
     position: fixed;
+    z-index: 999;
     right: 8px;
-    bottom: 8px;
+    bottom: 1.5rem;
 }
 
 .about-heads{
@@ -168,18 +172,53 @@ color: #2d343e;
     content: "";
 }
 
-.clb-event-card:hover {
- text-decoration: none;
- color: inherit;
-}
-
-.clb-event-card:hover div{
-    transform: scale(1.02);
-    transition: 0.4s  ease-in-out;
-}
 
 .nav-link{
     font-weight: 500;
+    font-size: 20px !important;
 }
 
+.accordion__button{
+    background: rgb(125,227,195) !important;
+    background: linear-gradient(90deg, rgba(125,227,195,0.7987570028011204) 0%, rgba(157,231,208,0.5494572829131652) 52%, rgba(222,240,234,0.227328431372549) 100%) !important;
+    font-weight: bold !important;
+}
 
+.accordion__heading{
+    background-color: white !important;
+}
+
+.clb-event-details{
+    background: rgba(191, 239, 95, 0.575);
+    background: linear-gradient(157deg, rgba(199, 240, 116, 0.515) 0%, rgba(72, 219, 219, 0.498) 52%, rgba(85, 72, 228, 0.467) 100%);
+}
+.clb-evnt-card:hover{
+    transform: scale(1.02);
+    transition: all 0.2s  ease-in-out;
+    background: rgba(191, 239, 95, 0.303);
+    background: linear-gradient(157deg, rgba(199, 240, 116, 0.333) 0%, rgba(72, 219, 219, 0.3) 52%, rgba(85, 72, 228, 0.467) 100%);
+}
+.clb-evnt-card{
+    transition: all 0.2s  ease-in-out;
+    cursor: pointer;
+    border-radius: 32px 0px 32px 0px ;
+}
+
+.join-us-btn:hover{
+    transform: scale(1.05);
+    transition: all 0.1s ease-in-out;
+    background-color: #019b7f;
+}
+.join-us-btn{
+    transition: all 0.2s ease-in-out;
+}
+
+.linkedin-logo:hover{
+    fill: #0077b5 !important;
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.linkedin-logo{
+    transition: all 0.2s ease-in-out;
+}

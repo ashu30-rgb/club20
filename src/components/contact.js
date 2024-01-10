@@ -29,13 +29,12 @@ function Contact() {
       <section className="text-gray-600 body-font">
         <div className="container px-5 pt-8 mx-auto">
           <div className="text-center mb-0">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font text-[#41cea1] mb-4">
+            <h1 className="text-3xl md:text-4xl font-semibold md:font-bold text-[#046EC1] title-font mb-4">
               Stay Connected with Club Twenty
             </h1>
 
-            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
-              Your Bridge to a Thriving Student Community. Reach Out for
-              Inquiries, Collaborations, and More! Let's Shape Growth Together.
+            <p className="text-base lg:text-lg leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
+            Your Gateway to an Active Student Community. Connect with us for inquiries, collaborations, and more! Let's collaboratively nurture growth and shape a vibrant community together.
             </p>
 
             <div className="flex mt-6 justify-center">
@@ -70,6 +69,9 @@ function Contact() {
 
                 <p className="mt-1">
                 Jalandhar - Delhi, Grand Trunk Rd, Phagwara, Punjab 144411
+                </p>
+                <p className="mt-2">
+                DLF Phase 3, Gurugram, 122010
                 </p>
 
                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
@@ -107,7 +109,7 @@ function Contact() {
 
 <form ref={form} onSubmit={sendEmail}>
             <div className="relative mb-4">
-              <label for="name" className="leading-7 text-sm text-gray-600">
+              <label for="name" className="leading-7 text-md text-gray-600">
                 Name
               </label>
 
@@ -120,7 +122,7 @@ function Contact() {
             </div>
 
             <div className="relative mb-4">
-              <label for="email" className="leading-7 text-sm text-gray-600">
+              <label for="email" className="leading-7 text-md text-gray-600">
                 Email
               </label>
 
@@ -131,7 +133,7 @@ function Contact() {
                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
             </div>
             <div className="relative mb-4">
-              <label for="mobile" className="leading-7 text-sm text-gray-600">
+              <label for="mobile" className="leading-7 text-md text-gray-600">
                 Mobile
               </label>
 
@@ -143,7 +145,7 @@ function Contact() {
             </div>
 
             <div className="relative mb-4">
-              <label for="message" className="leading-7 text-sm text-gray-600">
+              <label for="message" className="leading-7 text-md text-gray-600">
                 Message
               </label>
 
@@ -154,13 +156,12 @@ function Contact() {
               ></textarea>
             </div>
             <button
-              className="text-white bg-[#4556B3] border-0 py-2 px-6 focus:outline-none hover:bg-[#364494] rounded text-lg"
-            >
+              className="text-white font-semibold bg-[#02C7A4] border-0 py-2 px-6 focus:outline-none hover:bg-[#37b8a0] rounded text-lg">
               Submit
             </button>
             </form>
             <p className="text-xs text-gray-500 mt-3">
-              Your mail will be user for further notifications.
+              *Your mail will be user for further notifications.
             </p>
           </div>
         </div>

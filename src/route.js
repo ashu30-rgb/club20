@@ -7,6 +7,7 @@ import Events from './components/events';
 import Contact from './components/contact';
 import EventDetails from './components/event-detail';
 import Submitted from './components/submitted';
+import Join from './components/join';
 
 
 function RouteContent() {
@@ -19,6 +20,7 @@ function RouteContent() {
       <Route path='/about' element ={<About/>}/>
       <Route path='/events' element ={<Events/>}/>
       <Route path='/contact' element ={<Contact/>}/>
+      <Route path='/join' element ={<Join/>}/>
       <Route path='/event-details' element ={<EventDetails/>}/>
       <Route path='/submitted' element ={<Submitted/>}/>
     </Routes>

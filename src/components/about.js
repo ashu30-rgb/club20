@@ -1,55 +1,39 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Team from "./team";
 import { Link } from "react-router-dom";
-import ktm from "../assets/ktm_show.JPG";
-import glow_run from "../assets/glow_run.JPG";
-import science from "../assets/science.jpg";
-import our_story from "../assets/our_story.JPG";
+import GLOWRUN from "../assets/events/GLOWRUN ELECTRICA.jpg";
+import KTM from "../assets/events/KTM STUNT SHOW.jpg";
+import isc from "../assets/events/INDIAN SCIENCE CONGRESS (ICS).jpg";
+import our_story from "../assets/our_story.webp";
 import CountUp from 'react-countup';
-import AOS from 'aos';
+import aos from 'aos';
 import 'aos/dist/aos.css';
+import about from "../assets/icons/about.webp"
 
 function About() {
+
+  useEffect(() => {
+    aos.init();
+  }, [])
+
   return (
     <>
-      <div className="about-page">
-        <aside
-          id="about-header"
-          className="about-header-image about-header-medium my-auto md:min-h-[80vh] md:bg-center"
-        >
-          <div className="join-sticker py-auto">
-            <a href="/contact" className="sticky">
-              Join Us
-            </a>
-          </div>
-          <div className="back-to-top">
-            <a href="#about-header" className="sticky">
-              <svg
-                width="24px"
-                height="24px"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <polygon
-                  fill="var(--ci-primary-color, #ffffff"
-                  points="390.624 150.625 256 16 121.376 150.625 144.004 173.252 240.001 77.254 240.001 495.236 272.001 495.236 272.001 77.257 367.996 173.252 390.624 150.625"
-                  className="ci-primary"
-                />
-              </svg>
-            </a>
-          </div>
-          <div className="flex justify-center md:mt-6">
-            <div className="about-header-inner md:max-w-[750px] md:h-[30vh] mx-auto text-center">
-              <h1 className="text-center py-4 !pb-0 font-bold md:mt-4 text-3xl">
+      <div className="about-page container md:px-5 py-24 mx-auto">
+      <div className="flex flex-wrap w-full">
+            <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
+              <h1 className="text-3xl md:text-4xl font-semibold md:font-bold title-font mb-2 text-[#046EC1]" data-aos="fade-in">
                 About Us
               </h1>
-              <p className="mx-auto w-3/4 mt-2 md:mt-6 leading-5 md:leading-8 md:text-2xl text-sm overflow-auto mb-2">
-                Club Twenty is a student organization run by students, for the
-                students established in 2017.
-              </p>
+              <div className="h-1 w-20 bg-[#02C7A4] rounded"></div>
+              <img loading=" lazy" width="620" height="450" data-aos="fade-up" src={about} alt="events"></img>
+            </div>
+            <div className="lg:w-1/2 w-full lg:ps-8 my-auto">
+            <h2 className='text-[#046EC1] font-bold text-2xl md:text-4xl drop-shadow-sm md:drop-shadow-xl  mb-4' data-aos="fade-up">Fostering Growth, Inspiring Leadership.</h2>
+            <p className="w-full leading-relaxed lg:leading-8 text-gray-500 lg:text-lg" data-aos="fade-in">
+            Club Twenty, since its inception in 2017, champions holistic student development through 100+ diverse events. A beacon for leadership, our student-led organization offers a platform for learning and skill-building. From marathons to cultural celebrations, our events resonate widely, fostering a culture of excellence. Beyond event curation, we provide comprehensive event management services. At Club Twenty, our commitment lies in nurturing holistic growth, offering students opportunities to engage, lead, and thrive. Join us on a transformative journey, where dynamic experiences shape leaders and create lasting memories. This is Club Twenty—where growth meets inspiration, and excellence becomes a way of life.
+            </p>
             </div>
           </div>
-        </aside>
         <div className="about-heads md:px-16">
           <ul className="list-none ">
             <li>
@@ -67,41 +51,34 @@ function About() {
           </ul>
         </div>
         <div id="who-we-are" className="p-8 w-full">
-          <h1 className=" text-4xl text-center mt-6 font-semibold text-[#41cea1]">
+          <h1 className="text-3xl md:text-4xl font-semibold md:font-bold text-center mt-6  text-[#046EC1]">
             Who we are
           </h1>
-          <p className="text-center text-lg leading-8 mt-6">
-            Club Twenty is a student organization run by the students, for the
-            students. It was established in 2017. This program goes beyond the
-            typical conventions of student-run groups and is grounded in the
-            idea of developing leadership growth and competency.
+          <p className="text-center lg:text-lg leading-8 mt-6">
+          At Club Twenty, we redefine student-led organizations. Operated by students, for students, our program transcends conventional models. Rooted in the core principle of fostering leadership growth and competency, we go beyond the ordinary. Empowering and innovative, Club Twenty is a dynamic platform where students drive and shape their own development, creating a unique community dedicated to leadership excellence.
           </p>
           <section className="text-gray-600 body-font">
             <div className="container mx-auto flex px-0 md:px-5 py-24 md:flex-row flex-col items-center">
               <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
                 <iframe
                   className="object-cover object-center w-full h- lg:w-[580px] lg:h-[315px]"
-                  src="https://www.youtube.com/embed/Y9-wdhbG5aQ?&autoplay=1&mute=1&controls=0&loop=1"
+                  src="https://www.youtube.com/embed/Y9-wdhbG5aQ?&autoplay=1&mute=1&controls=0&&showinfo=0&loop=1"
                   title="YouTube video player"
                   frameborder="0"
-                  allow="accelerometer; autoplay;&autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allow="accelerometer; autoplay;&autoplay=1; loop=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
                 ></iframe>
               </div>
               <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-                <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-[#41cea1]">
+                <h1 className="title-font text-3xl md:text-4xl font-semibold  mb-4 text-[#046EC1]">
                   Our main goal
                 </h1>
-                <p className="mb-8 leading-relaxed">
-                  Its main goal is to increase and encourage the interest and
-                  abilities of its members in a variety of extracurricular
-                  activities, bring up a culture of holistic growth. Up to this
-                  point, our organization has hosted numerous significant and
-                  national events.
+                <p className="mb-8 leading-relaxed text-left lg:text-lg">
+                Our primary objective at Club Twenty is to elevate the interest and capabilities of our members across diverse extracurricular activities, fostering a culture of holistic growth. Having successfully hosted numerous significant national events, our ambition is to expand further, particularly in organizing national-level sports events. We aspire to make a meaningful impact on our members, providing them with a dynamic platform for growth, learning, and enjoyment. Club Twenty is committed to creating experiences that transcend boundaries, allowing members to flourish personally and athletically.
                 </p>
                 <div className="flex justify-center">
                   <Link to="/contact">
-                    <button className="inline-flex text-white bg-[#4556B3] border-0 py-2 px-6 focus:outline-none hover:bg-[#364494] rounded text-lg">
+                    <button className="inline-flex text-white bg-[#02C7A4] border-0 py-2 px-6 focus:outline-none hover:bg-[#30a892] rounded text-lg">
                       Join Us
                     </button>
                   </Link>
@@ -119,26 +96,22 @@ function About() {
             <section className="text-gray-600 body-font">
               <div className="container px-0 md:px-5 py-24 mx-auto">
                 <div className="flex flex-col text-center w-full mb-20">
-                  <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-[#41cea1]">
+                  <h1 className="text-3xl md:text-4xl font-semibold md:font-bold title-font mb-4 text-[#046EC1]">
                     Our Story
                   </h1>
-                  <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-                    Club Twenty's journey began in 2017, aiming to nurture
-                    student leadership and holistic growth. Hosting 70+ events,
-                    including Indian Science Congress and NASA, the club's Tier
-                    5 status reflects its dedication to fostering student
-                    development through diverse activities.
+                  <p className="lg:w-2/3 mx-auto leading-relaxed lg:text-lg">
+                  In 2017, Club Twenty embarked on a journey to cultivate student leadership and holistic growth. With over 100 events, including the nationally acclaimed GlowRun Electrica marathon, our impact is undeniable. Having engaged over 1000 members to date, Club Twenty continues to be a vibrant community dedicated to shaping leaders and creating meaningful experiences.
                   </p>
                 </div>
                 <section class="text-gray-600 body-font">
                   <div class="container md:px-5 py-24 mx-auto flex flex-wrap">
                     <div class="flex flex-wrap w-full">
-                      <div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
-                        <div class="flex relative pb-12">
+                      <div class="xl:w-2/5 md:pr-10 md:py-6">
+                        <div class="flex relative pb-12" >
                           <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
                             <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
                           </div>
-                          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#02C7A4] inline-flex items-center justify-center text-white relative z-10" data-aos="fade-in">
                             <svg
                               fill="none"
                               stroke="currentColor"
@@ -151,15 +124,12 @@ function About() {
                               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                             </svg>
                           </div>
-                          <div class="flex-grow pl-4">
+                          <div class="flex-grow pl-4" data-aos="slide-right">
                             <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-                              Inception of a Vision
+                            Visionary Roots
                             </h2>
                             <p class="leading-relaxed">
-                              Founded in 2017, Club Twenty emerged with a
-                              purpose – to cultivate leadership and holistic
-                              growth, transcending traditional student-run
-                              groups.
+                            Established in 2017, Club Twenty was born with a distinct purpose – to revolutionize student leadership and holistic growth, transcending the norms of traditional student-run organizations.
                             </p>
                           </div>
                         </div>
@@ -167,7 +137,7 @@ function About() {
                           <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
                             <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
                           </div>
-                          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#02C7A4] inline-flex items-center justify-center text-white relative z-10" data-aos="fade-in">
                             <svg
                               fill="none"
                               stroke="currentColor"
@@ -180,14 +150,12 @@ function About() {
                               <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                             </svg>
                           </div>
-                          <div class="flex-grow pl-4">
+                          <div class="flex-grow pl-4" data-aos="slide-left">
                             <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-                              Eventful Evolution
+                            Dynamic Growth
                             </h2>
                             <p class="leading-relaxed">
-                              With 70+ events, including Indian Science Congress
-                              and NASA, the club showcased its ability to
-                              orchestrate significant national gatherings.
+                            Marking its trajectory with 100+ events, including the prestigious Indian Science Congress and marquee events like GlowRun Electrica and Race for Grace, the club has proven its prowess in orchestrating significant national gatherings.
                             </p>
                           </div>
                         </div>
@@ -195,7 +163,7 @@ function About() {
                           <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
                             <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
                           </div>
-                          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#02C7A4] inline-flex items-center justify-center text-white relative z-10" data-aos="fade-in">
                             <svg
                               fill="none"
                               stroke="currentColor"
@@ -209,14 +177,12 @@ function About() {
                               <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
                             </svg>
                           </div>
-                          <div class="flex-grow pl-4">
+                          <div class="flex-grow pl-4" data-aos="slide-right">
                             <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-                              Fostering Participation
+                            Community Engagement
                             </h2>
                             <p class="leading-relaxed">
-                              Glow Run, Race for Grace, Freshmen Induction –
-                              drawing 2000+ participants, each event fosters
-                              shared interests and holistic development.
+                            From the vibrant Glow Run to the impactful Race for Grace and Freshmen Induction, each event draws over 2000 participants, fostering shared interests and holistic development within the community.
                             </p>
                           </div>
                         </div>
@@ -224,7 +190,7 @@ function About() {
                           <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
                             <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
                           </div>
-                          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#02C7A4] inline-flex items-center justify-center text-white relative z-10" data-aos="fade-in">
                             <svg
                               fill="none"
                               stroke="currentColor"
@@ -238,19 +204,17 @@ function About() {
                               <circle cx="12" cy="7" r="4"></circle>
                             </svg>
                           </div>
-                          <div class="flex-grow pl-4">
+                          <div class="flex-grow pl-4" data-aos="slide-left">
                             <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-                              Aspirations Unveiled
+                            Future Horizons
                             </h2>
                             <p class="leading-relaxed">
-                              Looking ahead, Club Twenty envisions a
-                              National-level marathon, State-level sports, Glow
-                              Run 2, and a Fitness talk.
+                            Looking ahead, Club Twenty envisions hosting a National-level marathon, State-level sports events, Glow Run 2, and insightful Fitness talks, setting the stage for even more ambitious endeavors.
                             </p>
                           </div>
                         </div>
                         <div class="flex relative">
-                          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#02C7A4] inline-flex items-center justify-center text-white relative z-10" data-aos="fade-in">
                             <svg
                               fill="none"
                               stroke="currentColor"
@@ -264,21 +228,18 @@ function About() {
                               <path d="M22 4L12 14.01l-3-3"></path>
                             </svg>
                           </div>
-                          <div class="flex-grow pl-4">
+                          <div class="flex-grow pl-4" data-aos="slide-right">
                             <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-                              Cultivating Excellence
+                            Excellence in Cultivation
                             </h2>
                             <p class="leading-relaxed">
-                              Diverse talents thrive, mentoring under seniors
-                              and peers. Dedication propels the club to Tier 5,
-                              a testament to ongoing commitment to holistic
-                              growth.
+                            A breeding ground for diverse talents, Club Twenty thrives on mentorship from both seniors and peers. The club's dedication propels it to Tier 5, a testament to its unwavering commitment to ongoing holistic growth.
                             </p>
                           </div>
                         </div>
                       </div>
-                      <img
-                        class="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12"
+                      <img loading=" lazy" data-aos="zoom-in" delay={2}
+                        class="xl:w-3/5 mx-auto object-cover object-center rounded-lg xl:mt-0 mt-12"
                         src={our_story}
                         alt="Story"
                       />
@@ -286,19 +247,19 @@ function About() {
                   </div>
                 </section>
                 <div className="flex flex-wrap -m-4 text-center">
-                  <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-                    <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                  <div className="p-4 lg:w-1/4 sm:w-1/2 w-full ">
+                    <div className="border-2 border-gray-200 px-4 py-6 rounded-lg hover:border-[#5ACAA7]" data-aos="fade-up" data-aos-duration="500">
                       <svg
                         fill="none"
                         stroke="currentColor"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
-                        className="text-[#4556B3] w-12 h-12 mb-3 inline-block"
+                        className="text-[#02C7A4] w-12 h-12 mb-3 inline-block"
                         viewBox="0 0 24 24"
                       >
                         <svg
-                          fill="rgb(99 102 241)"
+                          fill="#02C7A4"
                           version="1.1"
                           id="Capa_1"
                           xmlns="http://www.w3.org/2000/svg"
@@ -381,20 +342,20 @@ function About() {
                         </svg>
                       </svg>
                       <h2 className="title-font font-medium text-3xl text-gray-900">
-                        10+
+                      <CountUp end={10} enableScrollSpy/>+
                       </h2>
                       <p className="leading-relaxed">Marathons</p>
                     </div>
                   </div>
-                  <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-                    <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                  <div className="p-4 lg:w-1/4 sm:w-1/2 w-full">
+                    <div className="border-2 border-gray-200 px-4 py-6 rounded-lg hover:border-[#5ACAA7]" data-aos="fade-up" data-aos-duration="500">
                       <svg
                         fill="none"
                         stroke="currentColor"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
-                        className="text-[#4556B3] w-12 h-12 mb-3 inline-block"
+                        className="text-[#02C7A4] w-12 h-12 mb-3 inline-block"
                         viewBox="0 0 24 24"
                       >
                         <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
@@ -402,24 +363,24 @@ function About() {
                         <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
                       </svg>
                       <h2 className="title-font font-medium text-3xl text-gray-900" ata-aos="fade-in">
-                        <CountUp end={1000} />+
+                        <CountUp end={1000} enableScrollSpy/>+
                       </h2>
                       <p className="leading-relaxed">Members</p>
                     </div>
                   </div>
-                  <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-                    <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                  <div className="p-4 lg:w-1/4 sm:w-1/2 w-full">
+                    <div className="border-2 border-gray-200 px-4 py-6 rounded-lg hover:border-[#5ACAA7]" data-aos="fade-up" data-aos-duration="500">
                       <svg
                         fill="none"
                         stroke="currentColor"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
-                        className="text-[#4556B3] w-12 h-12 mb-3 inline-block"
+                        className="text-[#02C7A4] w-12 h-12 mb-3 inline-block"
                         viewBox="0 0 24 24"
                       >
                         <svg
-                          fill="rgb(99 102 241)"
+                          fill="#02C7A4"
                           version="1.1"
                           id="Capa_1"
                           xmlns="http://www.w3.org/2000/svg"
@@ -459,26 +420,26 @@ function About() {
                         </svg>
                       </svg>
                       <h2 className="title-font font-medium text-3xl text-gray-900">
-                        100+
+                      <CountUp end={100} enableScrollSpy/>+
                       </h2>
                       <p className="leading-relaxed">Events</p>
                     </div>
                   </div>
-                  <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-                    <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                  <div className="p-4 lg:w-1/4 sm:w-1/2 w-full">
+                    <div className="border-2 border-gray-200 px-4 py-6 rounded-lg hover:border-[#5ACAA7]" data-aos="fade-up" data-aos-duration="500"> 
                       <svg
                         fill="none"
                         stroke="currentColor"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
-                        className="text-[#4556B3] w-12 h-12 mb-3 inline-block"
+                        className="text-[#02C7A4] w-12 h-12 mb-3 inline-block"
                         viewBox="0 0 24 24"
                       >
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                       </svg>
                       <h2 className="title-font font-medium text-3xl text-gray-900">
-                        6+
+                      <CountUp end={6} delay={2} enableScrollSpy/>+
                       </h2>
                       <p className="leading-relaxed">Years of Trust</p>
                     </div>
@@ -498,119 +459,62 @@ function About() {
         <div className="container px-0 md:px-5 py-24 mx-auto">
           <div className="flex flex-col">
             <div className="h-1 bg-gray-200 rounded overflow-hidden">
-              <div className="w-24 h-full bg-#4556B3]"></div>
+              <div className="w-24 h-full bg-[#4556B3]"></div>
             </div>
             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-              <h1 className="sm:w-2/5 text-[#41cea1] font-medium title-font text-2xl mb-2 sm:mb-0">
+              <h1 className="sm:w-2/5 text-3xl md:text-4xl font-semibold text-[#046EC1] title-font mb-2 sm:mb-0">
                 Our Past events
               </h1>
-              <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">
-                Certainly! Here are some of the notable past events meticulously
-                organized by the proactive members of Club Twenty, showcasing
-                their dedication to holistic growth and fostering leadership
-                skills among students:
+              <p className="sm:w-3/5 leading-relaxed text-base lg:text-lg sm:pl-10 pl-0">
+              Certainly! Explore a selection of meticulously organized past events by the proactive members of Club Twenty, a testament to their commitment to fostering leadership skills and holistic growth among students:
               </p>
             </div>
           </div>
           <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-            <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
-              <div className="rounded-lg h-64 overflow-hidden">
-                <img
-                  alt="content"
-                  className="object-cover object-center h-full w-full"
-                  src={glow_run}
-                />
-              </div>
-              <h2 className="text-xl font-medium title-font text-gray-900 mt-5">
-                Glow Run
-              </h2>
-              <p className="text-base leading-relaxed mt-2">
-                A national event, Night marathon, supporting and spreading
-                awareness about a Fit india Campaign and also 50k+ trees were
-                donated by Club20 to support farmes in south india
-              </p>
-              <Link
-                to="/events"
-                className="text-[#4556B3] inline-flex items-center mt-3"
-              >
-                Learn More
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </Link>
+            <div className="p-4 md:w-1/3 clb-evnt-card">
+                      <Link to="/events" className="">
+                        <div data-aos="fade-up">
+                          <img loading=" lazy" className="lg:h-48 md:h-36 w-full object-cover object-center rounded-md" src={GLOWRUN} alt="event"/>
+                          <div className="p-6">
+                            <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                              Night Marathon
+                            </h2>
+                            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                            Glow Run
+                            </h1>
+                          </div>
+                        </div>
+                      </Link>
             </div>
-            <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
-              <div className="rounded-lg h-64 overflow-hidden">
-                <img
-                  alt="content"
-                  className="object-cover object-center h-full w-full"
-                  src={ktm}
-                />
-              </div>
-              <h2 className="text-xl font-medium title-font text-gray-900 mt-5">
-                KTM Stunt Show
-              </h2>
-              <p className="text-base leading-relaxed mt-2">
-                KTM stunt show orgainsed by Club20 association with KTM.
-              </p>
-              <Link
-                to="/events"
-                className="text-[#4556B3] inline-flex items-center mt-3"
-              >
-                Learn More
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </Link>
+            <div className="p-4 md:w-1/3 clb-evnt-card">
+                      <Link to="/events" className="">
+                        <div data-aos="fade-up">
+                          <img className="lg:h-48 md:h-36 w-full object-cover object-center rounded-md" src={KTM} alt="event"/>
+                          <div className="p-6">
+                            <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                              Stunt Show
+                            </h2>
+                            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                            KTM Stunt Show
+                            </h1>
+                          </div>
+                        </div>
+                      </Link>
             </div>
-            <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
-              <div className="rounded-lg h-64 overflow-hidden">
-                <img
-                  alt="content"
-                  className="object-cover object-center h-full w-full"
-                  src={science}
-                />
-              </div>
-              <h2 className="text-xl font-medium title-font text-gray-900 mt-5">
-                Science Exhibition
-              </h2>
-              <p className="text-base leading-relaxed mt-2">
-                Science exhibition with 15k+ delegates held in presence of
-                honorable Prime Minister Shri. Narendra modi ji
-              </p>
-              <Link
-                to="/events"
-                className="text-[#4556B3] inline-flex items-center mt-3"
-              >
-                Learn More
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </Link>
+            <div className="p-4 md:w-1/3 clb-evnt-card">
+                      <Link to="/events" className="">
+                        <div data-aos="fade-up">
+                          <img loading=" lazy" className="lg:h-48 md:h-36 w-full object-cover object-center rounded-md" src={isc} alt="event"/>
+                          <div className="p-6">
+                            <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                              Educational
+                            </h2>
+                            <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                            Science Exhibition
+                            </h1>
+                          </div>
+                        </div>
+                      </Link>
             </div>
           </div>
         </div>
