@@ -48,13 +48,13 @@ function Header() {
 
 <nav className="navbar navbar-expand-lg navbar-light bg-light fixed w-100 z-50 px-2 md:px-0">
   <a className="navbar-brand" href="/">
-  <img loading=" lazy" className='w-28 md:w-32 md:ml-8' src={logo} alt="Logo" />
+  <img className='w-28 md:w-32 md:ml-8' src={logo} alt="Logo" />
   </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-  <div className="collapse navbar-collapse py-3" id="navbarSupportedContent">
+  <div className="collapse navbar-collapse py-2" id="navbarSupportedContent">
     <ul className="navbar-nav ml-auto pr-8">
       <li className="nav-item active px-1 lg:hover:scale-105">
         <NavLink className="nav-link" to="/">Home <span className="sr-only">(current)</span></NavLink>

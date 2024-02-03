@@ -1,19 +1,14 @@
 import React, {useEffect} from "react";
 import Team from "./team";
 import { Link } from "react-router-dom";
-import GLOWRUN from "../assets/events/GLOWRUN ELECTRICA.jpg";
-import KTM from "../assets/events/KTM STUNT SHOW.jpg";
-import isc from "../assets/events/INDIAN SCIENCE CONGRESS (ICS).jpg";
-import our_story from "../assets/our_story.webp";
 import CountUp from 'react-countup';
 import aos from 'aos';
 import 'aos/dist/aos.css';
-import about from "../assets/icons/about.webp"
 
 function About() {
 
   useEffect(() => {
-    aos.init();
+    aos.init({once: true});
   }, [])
 
   return (
@@ -25,7 +20,9 @@ function About() {
                 About Us
               </h1>
               <div className="h-1 w-20 bg-[#02C7A4] rounded"></div>
-              <img loading=" lazy" width="620" height="450" data-aos="fade-up" src={about} alt="events"></img>
+              <div className="flex justify-center items-center">
+              <img width="400" height="200" data-aos="fade-up" src="https://res.cloudinary.com/dt5k5t2kd/image/upload/v1705847174/Club%20twenty%20Website/WEBSITE%20IMAGES/ABOUT_US_pbxiky.webp" alt="About us"></img>
+              </div>
             </div>
             <div className="lg:w-1/2 w-full lg:ps-8 my-auto">
             <h2 className='text-[#046EC1] font-bold text-2xl md:text-4xl drop-shadow-sm md:drop-shadow-xl  mb-4' data-aos="fade-up">Fostering Growth, Inspiring Leadership.</h2>
@@ -50,7 +47,7 @@ function About() {
             </li>
           </ul>
         </div>
-        <div id="who-we-are" className="p-8 w-full">
+        <div id="who-we-are" className="py-8 md:p-8 w-full">
           <h1 className="text-3xl md:text-4xl font-semibold md:font-bold text-center mt-6  text-[#046EC1]">
             Who we are
           </h1>
@@ -238,11 +235,14 @@ function About() {
                           </div>
                         </div>
                       </div>
-                      <img loading=" lazy" data-aos="zoom-in" delay={2}
-                        class="xl:w-3/5 mx-auto object-cover object-center rounded-lg xl:mt-0 mt-12"
-                        src={our_story}
+                      <div className="flex justify-center items-center">
+                      <img data-aos="zoom-in" delay={2}
+                        class="mx-auto object-cover object-center rounded-lg xl:mt-0 mt-12"
+                        src="https://res.cloudinary.com/dt5k5t2kd/image/upload/v1705847174/Club%20twenty%20Website/WEBSITE%20IMAGES/OUR_STORY_tvuzyg.webp"
                         alt="Story"
-                      />
+                        width="595" height="468"
+                        />
+                        </div>
                     </div>
                   </div>
                 </section>
@@ -470,11 +470,11 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-            <div className="p-4 md:w-1/3 clb-evnt-card">
+          <div className="flex flex-wrap sm:-m-4 mb-4 -mx-4 -mt-4">
+            <div className="p-1 px-2 md:w-1/3">
                       <Link to="/events" className="">
-                        <div data-aos="fade-up">
-                          <img loading=" lazy" className="lg:h-48 md:h-36 w-full object-cover object-center rounded-md" src={GLOWRUN} alt="event"/>
+                        <div data-aos="fade-up" className="p-2 clb-evnt-card">
+                          <img className="lg:h-48 md:h-36 w-full object-cover object-center rounded-md" src="https://res.cloudinary.com/dt5k5t2kd/image/upload/v1704991517/Club%20twenty%20Website/Events/GLOWRUN_xdznvz.webp" alt="event"/>
                           <div className="p-6">
                             <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                               Night Marathon
@@ -486,10 +486,10 @@ function About() {
                         </div>
                       </Link>
             </div>
-            <div className="p-4 md:w-1/3 clb-evnt-card">
+            <div className="p-1 px-2 md:w-1/3">
                       <Link to="/events" className="">
-                        <div data-aos="fade-up">
-                          <img className="lg:h-48 md:h-36 w-full object-cover object-center rounded-md" src={KTM} alt="event"/>
+                        <div data-aos="fade-up" className="p-2 clb-evnt-card">
+                          <img className="lg:h-48 md:h-36 w-full object-cover object-center rounded-md" src="https://res.cloudinary.com/dt5k5t2kd/image/upload/v1704991518/Club%20twenty%20Website/Events/KTM_STUNT_SHOW_qfd6v2.webp" alt="event"/>
                           <div className="p-6">
                             <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                               Stunt Show
@@ -501,10 +501,10 @@ function About() {
                         </div>
                       </Link>
             </div>
-            <div className="p-4 md:w-1/3 clb-evnt-card">
+            <div className="p-1 px-2 md:w-1/3">
                       <Link to="/events" className="">
-                        <div data-aos="fade-up">
-                          <img loading=" lazy" className="lg:h-48 md:h-36 w-full object-cover object-center rounded-md" src={isc} alt="event"/>
+                        <div data-aos="fade-up" className="p-2 clb-evnt-card">
+                          <img className="lg:h-48 md:h-36 w-full object-cover object-center rounded-md" src="https://res.cloudinary.com/dt5k5t2kd/image/upload/v1704991517/Club%20twenty%20Website/Events/ISC_cyr0ik.webp" alt="event"/>
                           <div className="p-6">
                             <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                               Educational

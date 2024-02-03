@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 function EventDetails() {
   const location = useLocation();
   const data = location.state?.data
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className='clb-event-details'>
@@ -30,9 +33,9 @@ function EventDetails() {
         </div>
       </div> */}
       <section class="text-gray-600 body-font ">
-  <div class="container py-24 mx-auto flex flex-col">
+  <div class="container py-24 pb-36 mx-auto flex flex-col">
     <div class="lg:w-4/6 mx-auto rounded-2xl md:p-4">
-      <div class="rounded-lg h-64 overflow-hidden">
+      <div class="rounded-lg h-fit overflow-hidden">
         <img loading=" lazy" alt="content" class="object-cover object-center h-full w-full" src={data?.image}/>
       </div>
       <div class="flex flex-col sm:flex-row mt-10">
@@ -49,7 +52,7 @@ function EventDetails() {
           </div>
         </div>
         <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left flex justify-center items-center">
-          <p class="leading-relaxed text-lg mb-4 lg:leading-8">{data?.desc}</p>
+          <p class="leading-relaxed text-lg mb-4 lg:leading-8 text-left">{data?.desc}</p>
         </div>
       </div>
     </div>

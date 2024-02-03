@@ -1,5 +1,4 @@
 import React from 'react'
-import joinus from "../assets/icons/join.webp"
 
 function join() {
   return (
@@ -10,7 +9,9 @@ function join() {
         Join Us 
       </h1>
       <div className="h-1 w-20 bg-[#02C7A4] rounded"></div>
-      <img loading=" lazy" src={joinus} alt="events"></img>
+      <div className='flex items-center justify-center'>
+      <img width="450" height="400" src="https://res.cloudinary.com/dt5k5t2kd/image/upload/v1705847172/Club%20twenty%20Website/WEBSITE%20IMAGES/JOIN_US_j926em.webp" alt="events"></img>
+      </div>
     </div>
     <div className="lg:w-1/2 lg:my-auto w-full lg:!ps-8">
         <h2 className='text-[#046EC1] font-bold text-4xl md:text-6xl drop-shadow-sm md:drop-shadow-xl  mb-4'>Join us Today</h2>

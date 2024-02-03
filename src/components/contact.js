@@ -57,7 +57,7 @@ function Contact() {
               marginwidth="0"
               scrolling="no"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55884667.01345148!2d-2.3400878906249982!3d31.250378149855713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39101a5dabbe37e9%3A0xa3e90c2466ff0491!2sCLUB%20TWENTY!5e0!3m2!1sen!2sin!4v1691683754059!5m2!1sen!2sin"
-              loading="lazy"
+              
             ></iframe>
            
 
@@ -67,18 +67,16 @@ function Contact() {
                   ADDRESS
                 </h2>
 
-                <p className="mt-1">
+                {/* <p className="mt-1">
                 Jalandhar - Delhi, Grand Trunk Rd, Phagwara, Punjab 144411
                 </p>
                 <p className="mt-2">
                 DLF Phase 3, Gurugram, 122010
-                </p>
+                </p> */}
+                <div className='mt-3'><span className='font-bold'>Head office:</span> Building 3, S Block, DLF Phase 3, Gurgaon, Haryana 122002</div>
+      <div className='mt-2'>13-209 LPU, Jalandhar - Delhi, Grand Trunk Rd, Phagwara, Punjab 144411</div>
 
-                <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
-                  PHONE
-                </h2>
-
-                <p className="leading-relaxed">+91 7906440791</p>
+                
               </div>
 
               <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
@@ -92,7 +90,12 @@ function Contact() {
                 <Link className="text-indigo-500 leading-relaxed">
                 info@clubtwenty.in
                 </Link>
+                <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
+                  PHONE
+                </h2>
 
+                <span className="leading-relaxed">+91 7307463073</span>
+                <span className='leading-relaxed ms-2'>+91 7906440791</span>
                 
               </div>
             </div>

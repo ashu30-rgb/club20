@@ -96,7 +96,6 @@ color: #2d343e;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    background-image: url(../assets/about_top.JPG);
     background-position: bottom 25%;
 }
 
@@ -122,6 +121,7 @@ color: #2d343e;
     position: fixed;
     right: -12px;
     top: 280px;
+    z-index: 99999;
 }
 .whatsapp-sticker{
     padding:6px;
@@ -130,7 +130,7 @@ color: #2d343e;
     border-radius: 50%;
     cursor: pointer;
     position: fixed;
-    z-index: 999;
+    z-index: 9;
     right: 8px;
     bottom: 1.5rem;
 }
@@ -175,7 +175,11 @@ color: #2d343e;
 
 .nav-link{
     font-weight: 500;
-    font-size: 20px !important;
+    font-size: 22px !important;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
+    font-weight: 700 !important;
 }
 
 .accordion__button{
@@ -193,15 +197,15 @@ color: #2d343e;
     background: linear-gradient(157deg, rgba(199, 240, 116, 0.515) 0%, rgba(72, 219, 219, 0.498) 52%, rgba(85, 72, 228, 0.467) 100%);
 }
 .clb-evnt-card:hover{
-    transform: scale(1.02);
     transition: all 0.2s  ease-in-out;
-    background: rgba(191, 239, 95, 0.303);
-    background: linear-gradient(157deg, rgba(199, 240, 116, 0.333) 0%, rgba(72, 219, 219, 0.3) 52%, rgba(85, 72, 228, 0.467) 100%);
+    /* background: rgba(4, 111, 193, 0.247);
+    background: linear-gradient(90deg, rgba(4, 111, 193, 0.161) 0%, rgba(2, 199, 163, 0.287) 100%); */
+    border: 1px solid rgba(128, 128, 128, 0.408);
 }
 .clb-evnt-card{
     transition: all 0.2s  ease-in-out;
     cursor: pointer;
-    border-radius: 32px 0px 32px 0px ;
+    border-radius: 8px ;
 }
 
 .join-us-btn:hover{
